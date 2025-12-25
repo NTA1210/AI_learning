@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "node -r ts-node/register -r tsconfig-paths/register src/tools/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "openai": "^6.15.0",
+    "tsconfig-paths": "^4.2.0",
+    "zod": "^4.2.1"
+  }
+}
