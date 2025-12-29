@@ -1,0 +1,15 @@
+1. All users must comply with applicable laws and regulations when using the service.
+2. Personal data is collected and processed in accordance with our privacy policy.
+3. Unauthorized access, misuse, or disruption of the system is strictly prohibited.
+4. Users are responsible for maintaining the confidentiality of their account credentials.
+5. The company reserves the right to modify or terminate services at any time without prior notice.
+6. Content that is illegal, harmful, or offensive is not permitted on the platform.
+7. Any violation of these policies may result in suspension or permanent account termination.
+8. The service is provided on an "as is" basis without warranties of any kind.
+9. Users agree not to attempt to reverse engineer or exploit the system.
+10. All intellectual property rights remain the property of their respective owners.
+11. We may update these policies periodically to reflect legal or operational changes.
+12. Continued use of the service constitutes acceptance of the updated policies.
+13. Users must not upload malware, spam, or malicious code.
+14. The company is not liable for any indirect or consequential damages.
+15. Support is provided at the discretion of the company and may be limited.

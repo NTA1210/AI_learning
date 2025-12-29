@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import dotenv from "dotenv";
-import { context } from "./context";
+import { context, trimContextIfNeeded } from "./context";
 import { tools } from "./toolsList";
 import { calculateFinalUsage } from "@/utils/currencyCalc";
 import { CompletionUsage } from "openai/resources";
@@ -8,6 +8,7 @@ import { dispatchToolCall, toolHandlers } from "@/controllers/toolsHandler";
 dotenv.config();
 
 let openAI: OpenAI;
+const COMPLETION_BUFFER = 200;
 
 try {
   openAI = new OpenAI();
@@ -17,10 +18,12 @@ try {
 }
 
 async function callOpenAIWithFunctions() {
+  trimContextIfNeeded();
+
   const response = await openAI.chat.completions.create({
     model: process.env.OPENAI_MODEL as string,
     messages: context,
-    max_completion_tokens: 200,
+    max_completion_tokens: COMPLETION_BUFFER,
     tools: tools,
     tool_choice: "auto",
   });
@@ -63,7 +66,7 @@ async function callOpenAIWithFunctions() {
     const secondResponse = await openAI.chat.completions.create({
       model: process.env.OPENAI_MODEL as string,
       messages: context,
-      max_completion_tokens: 200,
+      max_completion_tokens: COMPLETION_BUFFER,
     });
 
     const secondMsg = secondResponse.choices[0]?.message;
